@@ -1,0 +1,2 @@
+docker pull agrigorev/model-2025-hairstyle:v1
+docker images | grep hairstyle
