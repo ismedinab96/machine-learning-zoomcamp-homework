@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zoomcamp-deployment
+spec:
+  replicas: 2   # número de Pods que quieres correr
+  selector:
+    matchLabels:
+      app: zoomcamp-model
+  template:
+    metadata:
+      labels:
+        app: zoomcamp-model
+    spec:
+      containers:
+      - name: zoomcamp-container
+        image: zoomcamp-model:3.13.10-hw10
+        ports:
+        - containerPort: 80
